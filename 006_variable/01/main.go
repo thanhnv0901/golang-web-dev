@@ -12,8 +12,15 @@ func init() {
 	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
 }
 
+type exampleStruct struct {
+	Name string
+	Age  int
+}
+
 func main() {
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", `Release self-focus; embrace other-focus.`)
+
+	persion := exampleStruct{"thanh", 24}
+	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", persion)
 	if err != nil {
 		log.Fatalln(err)
 	}
