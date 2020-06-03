@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// Ham nay se load tat ca file trong thu muc hien tai len server
 	http.Handle("/", http.FileServer(http.Dir(".")))
 	http.HandleFunc("/dog/", dog)
 	http.ListenAndServe(":8080", nil)
