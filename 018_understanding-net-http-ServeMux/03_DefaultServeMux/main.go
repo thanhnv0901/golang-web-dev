@@ -19,7 +19,7 @@ func (c hotcat) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 	var d hotdog
-	var c hotcat
+	var c hotcat 
 
 	http.Handle("/dog", d)
 	http.Handle("/cat", c)

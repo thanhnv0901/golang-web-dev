@@ -31,6 +31,7 @@ var fm = template.FuncMap{
 }
 
 func init() {
+	// Phai add function truoc khi parsefile, neu khong se khong co tac dung
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
 }
 
